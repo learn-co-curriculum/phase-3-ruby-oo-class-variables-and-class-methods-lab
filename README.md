@@ -2,8 +2,8 @@
 
 ## Learning Goals
 
-- Use class variables to keep track of data pertaining to a class.
-- Define class methods to expose data pertaining to a class.
+- Use class variables to keep track of data pertaining to a class
+- Define class methods to expose data pertaining to a class
 
 ## Introduction
 

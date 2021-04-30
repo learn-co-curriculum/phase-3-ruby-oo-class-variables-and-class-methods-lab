@@ -1,11 +1,11 @@
 # Class Variables And Class Methods Lab
 
-## Objectives
+## Learning Goals
 
-1. Use class variables to keep track of data pertaining to a class.
-2. Define class methods to expose data pertaining to a class.
+- Use class variables to keep track of data pertaining to a class.
+- Define class methods to expose data pertaining to a class.
 
-## Overview
+## Introduction
 
 In this lab, we'll be dealing with a `Song` class. The `Song` class can produce individual songs. Each song has a name, an artist and a genre. We need our `Song` class to be able to keep track of the number of songs that it creates.
 
@@ -88,5 +88,3 @@ Song.genre_count
 This manner of displaying numerical data is called a [histogram](https://en.wikipedia.org/wiki/Histogram). How will you create your histogram? You will need to iterate over the `@@genres` array and populate a hash with the key/value pairs. You will need to check to see if the hash already contains a key of a particular genre. If so, increment the value of that key by one, otherwise, create a new key/value pair.
 
 * Write a class method, `.artist_count`, that returns a histogram similar to the one above, but for artists rather than genres. 
-
-

@@ -30,22 +30,21 @@ describe Song do
   end
 
   describe 'class methods' do
-    # This runs before each test and creates new instances using the Song class
+    # This runs before each test
     before do
-      Song.new("Lucifer", "Jay-Z", "rap")
-      Song.new("99 Problems", "Jay-Z", "rap")
-      Song.new("hit me baby one more time", "Brittany Spears", "pop")
-    end
-    
-    # This resets the class variables after each test runs
-    after do 
+      # reset the class variables on each test
       Song.class_variable_set(:@@artists, [])
       Song.class_variable_set(:@@genres, [])
       Song.class_variable_set(:@@count, 0)
       Song.class_variable_set(:@@artist_count, {})
       Song.class_variable_set(:@@genre_count, {})
+
+      # create new instances using the Song class
+      Song.new("Lucifer", "Jay-Z", "rap")
+      Song.new("99 Problems", "Jay-Z", "rap")
+      Song.new("hit me baby one more time", "Brittany Spears", "pop")
     end
-  
+    
     describe 'class variables' do 
       it 'has a class variable, @@count' do 
         expect(Song.class_variable_get(:@@count)).to eq(3)

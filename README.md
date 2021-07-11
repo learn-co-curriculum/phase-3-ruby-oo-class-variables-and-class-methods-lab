@@ -127,10 +127,19 @@ Song.genre_count
 
 This manner of displaying numerical data is called a
 [histogram](https://en.wikipedia.org/wiki/Histogram). How will you create your
-histogram? You will need to iterate over the `@@genres` array and populate a
-hash with the key/value pairs. You will need to check to see if the hash already
-contains a key of a particular genre. If so, increment the value of that key by
-one, otherwise, create a new key/value pair.
+histogram? There are a few ways!
+
+- You can need to iterate over the `@@genres` array and populate a hash with the
+  key/value pairs. You will need to check to see if the hash already contains a
+  key of a particular genre. If so, increment the value of that key by one,
+  otherwise, create a new key/value pair.
+- You can also look into the [`#tally`][tally docs] method.
 
 `Song.artist_count`: returns a histogram similar to the one above, but for
 artists rather than genres.
+
+## Resources
+
+- [`#tally`][tally docs]
+
+[tally docs]: https://ruby-doc.org/core-2.7.0/Enumerable.html#method-i-tally

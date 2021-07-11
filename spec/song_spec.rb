@@ -30,9 +30,10 @@ describe Song do
   end
 
   describe 'class methods' do
-    # This runs before each test
+    
+    # This `before` block runs before each test so we can start with a clean slate
     before do
-      # reset the class variables on each test
+      # reset the class variables
       Song.class_variable_set(:@@artists, [])
       Song.class_variable_set(:@@genres, [])
       Song.class_variable_set(:@@count, 0)
